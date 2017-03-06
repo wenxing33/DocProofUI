@@ -7,6 +7,7 @@ angular.module('fileUpload', ['ngFileUpload'])
     vm.fileDescription = "",
     vm.fileDocVerifier = "";
     vm.activeTab = 1;
+    vm.tabDescription ="Please select a file that you wan to certify and store the fingerprint to blockchain.";
     vm.userNames = ["test_user1", "test_user2", "test_user3"];
     vm.userName = "test_user1";
     vm.viewerNames =["Viewer1","Viewer2","Viewer3"];
@@ -209,7 +210,7 @@ $(document).ready(function() {
                    url: '/UpdateViewer',
                    method: "POST",
                    data:{  "filehash":vm.fileHash,
-                           "viewerName":vm.viewerName}
+                           "viewerName":vm.document.viewer}
               }).then(function (resp) { //upload function returns a promise
                       show_message("Send to Viewer successfully", 'success');
                   })
@@ -220,9 +221,13 @@ $(document).ready(function() {
     var viewerName = "";
     if(vm.activeTab ===2){
       viewerName = vm.corporateName;
+      vm.tabDescription ="Please select a file so that a  fingerprint can be generated to be used to find the certified record which is stored in blockchain.";
 
     }else if(vm.activeTab===3){
       viewerName = vm.viewerName;
+      vm.tabDescription ="Please select a file which you want to find out the certified owner and the integrity of the file you selected here";
+    }else{
+      vm.tabDescription ="Please select a file that you wan to certify and store the fingerprint to blockchain.";
     }
 
     $http({
@@ -255,9 +260,15 @@ $(document).ready(function() {
         vm.fileDescription = '';
         vm.fileDocVerifier ='';
         vm.file ='';
+        vm.tabDescription ="Please select a file that you wan to certify and store the fingerprint to blockchain.";
 
     } else{
         vm.document ={};
+        if(tabId ===2 ){
+          vm.tabDescription ="Please select a file so that a  fingerprint can be generated to be used to find the certified record which is stored in blockchain.";
+        }else{
+           vm.tabDescription ="Please select a file which you want to find out the certified owner and the integrity of the file you selected here";
+        }
     }
    }
 

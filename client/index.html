@@ -48,7 +48,8 @@
     <div id="content" >
       <div class="hero-unit">
         <h3>
-          Select a document and have it certified in the Bitcoin blockchain
+         <!-- Select a document and have it certified in the Bitcoin blockchain -->
+          {{up.tabDescription}} 
         </h3>
 
         <div id="wait" class="row">
@@ -110,7 +111,8 @@
                     </div>
  <div class="col-xs-6 form-group">
                         <label >Document Owner</label>
-                        <input ng-model="up.ownerName" type="text" class="form-control" >
+                        <select class="form-control" ng-model="up.ownerName"  class="form-control" ng-options="x for x in up.corporateNames">
+</select>
                     </div>
                     <div class="text-align-center">
     <button id="upload_submit"  type="submit" class="btn btn-warning" ng-click="up.submit()">Submit to Blockchain</button>
@@ -142,7 +144,8 @@
                     </div>
                     <div class="col-xs-6 form-group">
                         <label >Viewer Name</label>
-                        <input ng-model="up.document.viewer" type="text" class="form-control" >
+                         <select class="form-control" ng-model="up.document.viewer" class="form-control" ng-options="x for x in up.viewerNames">
+</select>
                     </div>
  <div class="text-align-center">
     <button id="upload_submit"  type="submit" class="btn btn-warning" ng-click="up.updateViewer()">Send to Viewer</button>
@@ -176,7 +179,15 @@
                         <label >Owner Name</label>
                         <input ng-model="up.document.docOwner" type="text" class="form-control" ng-disabled="true">
                     </div>
-                    
+                    <span class="clearfix"></span>
+      <div style="background-color: #eeeeee ;font-size: 18px" ng-show="up.document.docName !== undefined">
+     
+          The owner of the file is <b>{{up.document.docOwner}}</b> The fingerprint of the file you selected is the same as what is stored in blockchain. Both are certified by <b>{{up.document.docVerifier}}</b>.
+        
+
+        
+      </div>
+                   
                      
   </div>
   </div>

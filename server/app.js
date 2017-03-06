@@ -52,7 +52,7 @@
         fs.writeFileSync('fileData.json', configJSON); */
          var results11 = CreateDocument(req.body.userName,req.body.filehash,req.body.docName,req.body.docDesc, req.body.ownerName);
          //var results11 = TestQuery(req.body.filehash);
-         console.log(util.format("\nThe results from Test Query=%j", results11));
+         console.log(util.format("\n------------------------"));
 
          res.json({error_code:0,err_desc:null});
 
@@ -154,7 +154,7 @@ function UpdateViewer(fileHash, viewerName)
                   viewerName
                 ]
               },
-              secureContext: "test_user6"
+              secureContext: "test_user7"
             },
             id: 0
           };
@@ -239,7 +239,7 @@ function CreateDocument(userName, filehash, docName, docDesc, ownerName)
                 filehash
               ]
             },
-            secureContext: "test_user6"
+            secureContext: "test_user7"
           },
           id: 0
         };
@@ -319,7 +319,7 @@ var GetDocument = function (fileHash, viewerName, callback)
             viewerName
           ]
         },
-        secureContext: "test_user6"
+        secureContext: "test_user7"
       },
       id: 0
     };
