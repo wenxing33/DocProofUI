@@ -154,7 +154,7 @@ function UpdateViewer(fileHash, viewerName)
                   viewerName
                 ]
               },
-              secureContext: "test_user7"
+              secureContext: "test_user6"
             },
             id: 0
           };
@@ -173,8 +173,8 @@ function UpdateViewer(fileHash, viewerName)
 
 }
 
-    app.listen('3000', function(){
-        console.log('running on 3000...');
+    app.listen('8005', function(){
+        console.log('running on 5002 mapped to 10598...');
         init();
     });
 
@@ -239,7 +239,7 @@ function CreateDocument(userName, filehash, docName, docDesc, ownerName)
                 filehash
               ]
             },
-            secureContext: "test_user7"
+            secureContext: "test_user6"
           },
           id: 0
         };
@@ -319,7 +319,7 @@ var GetDocument = function (fileHash, viewerName, callback)
             viewerName
           ]
         },
-        secureContext: "test_user7"
+        secureContext: "test_user6"
       },
       id: 0
     };

@@ -1,8 +1,8 @@
 {
   "chainName":"docproof",
   "chaincodeID": "dcff3f9c3c1a782cef92ccfc015d1851639378ede0a8d5186e73e880be4d6ea8",
-  "chaincodeHost": "services-uscentral.skytap.com",
-  "chaincodePort": "9583",
+  "chaincodeHost": "localhost",
+  "chaincodePort": "7050",
   "deployWaitTime":"180",
   "user": {
 	     "username": "johnlee",

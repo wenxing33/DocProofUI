@@ -1,7 +1,7 @@
 
 <html>
 <head>
-  <title>Proof of Existence</title>
+  <title>Proof of Documents</title>
   <meta charset='utf-8' />
   <meta http-equiv="X-UA-Compatible" content="chrome=1" />
   <meta name="description" content="Proof of Existence" />
@@ -19,9 +19,9 @@
     <div class="navbar-inner">
       <div class="container">
        <ul class="nav nav-tabs">
-    <li ng-class="{'active':up.activeTab===1}"><a href="" ng-click="up.setActiveTab(1)">Bank</a></li>
-     <li ng-class="{'active':up.activeTab===2}"><a href="" ng-click="up.setActiveTab(2)">Corporate</a></li>
-    <li ng-class="{'active':up.activeTab===3}" ><a  href="" ng-click="up.setActiveTab(3)" >Viewer</a></li>
+    <li ng-class="{'active':up.activeTab===1}"><a href="" ng-click="up.setActiveTab(1)">KYC Document Notary</a></li>
+     <li ng-class="{'active':up.activeTab===2}"><a href="" ng-click="up.setActiveTab(2)">Corporate Document Owner</a></li>
+    <li ng-class="{'active':up.activeTab===3}" ><a  href="" ng-click="up.setActiveTab(3)" >KYC Performer</a></li>
     
   </ul>
       </div>
@@ -31,7 +31,7 @@
   <div class="container" style="padding-top:40px;">
 <div class="row navdropdown">
 <div class="col-xs-2 form-group" ng-show="up.activeTab===1">
-  <label >User Name:</label>
+  <label >Notary Name:</label>
   <select class="form-control" ng-model="up.userName" ng-options="x for x in up.userNames">
 </select></div>
 <div class="col-xs-2 form-group" ng-show="up.activeTab===2">
@@ -39,7 +39,7 @@
   <select class="form-control" ng-model="up.corporateName" ng-options="x for x in up.corporateNames">
 </select></div>
 <div class="col-xs-2 form-group" ng-show="up.activeTab===3">
-  <label >Viewer Name:</label>
+  <label >KYC Performer Name:</label>
   <select class="form-control" ng-model="up.viewerName" ng-options="x for x in up.viewerNames">
 </select></div></div>
  
@@ -82,7 +82,7 @@
 
         <div id="filedrag" style="display: none;" class="dropbox">
           Click here or drag and drop your document in the box. 
-          <br /> The file will NOT be uploaded. The cryptographic proof is calculated at client-side.
+          <br /> The file will NOT be uploaded. The fingerprint of the file is generated at browser-side.
         </div>
 
         <div id="explain"></div>
@@ -148,7 +148,7 @@
 </select>
                     </div>
  <div class="text-align-center">
-    <button id="upload_submit"  type="submit" class="btn btn-warning" ng-click="up.updateViewer()">Send to Viewer</button>
+    <button id="upload_submit"  type="submit" class="btn btn-warning" ng-click="up.updateViewer()">Send to KYC Performer(Your Bank)</button>
                      
   </div>
   </div>

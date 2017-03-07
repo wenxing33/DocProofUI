@@ -8,12 +8,12 @@ angular.module('fileUpload', ['ngFileUpload'])
     vm.fileDocVerifier = "";
     vm.activeTab = 1;
     vm.tabDescription ="Please select a file that you wan to certify and store the fingerprint to blockchain.";
-    vm.userNames = ["test_user1", "test_user2", "test_user3"];
-    vm.userName = "test_user1";
-    vm.viewerNames =["Viewer1","Viewer2","Viewer3"];
-    vm.viewerName ="Viewer1";
-    vm.corporateNames = ["Corp1", "Corp2", "Corp3"];
-    vm.corporateName = "Corp1";
+    vm.userNames = ["ING", "ABN AMRO", "HSBC"];
+    vm.userName = "ING";
+    vm.viewerNames =["ING", "ABN AMRO", "HSBC", "Romans Estate Agency"];
+    vm.viewerName ="HSBC";
+    vm.corporateNames = ["Wal-Mart", "TESCO", "Royal Dutch Shell"];
+    vm.corporateName = "Wal-Mart";
 
 var translate = function(x) {
   return x;
